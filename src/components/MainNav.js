@@ -18,7 +18,7 @@ const useStyles = makeStyles({
     zIndex: 100,
   },
 });
-
+// SimpleBottomNavigation function for showing bottom navigation bar
 export default function SimpleBottomNavigation() {
   const classes = useStyles();
   const [value, setValue] = React.useState(0);

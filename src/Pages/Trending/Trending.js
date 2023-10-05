@@ -3,7 +3,8 @@ import "./Trending.css";
 import { useEffect, useState } from "react";
 import SingleContent from "../../components/SingleContent/SingleContent";
 import CustomPagination from "../../components/Pagination/CustomPagination";
-
+// Trending component for showing the latest movies and
+// web-series on the page
 const Trending = () => {
   const [page, setPage] = useState(1);
   const [content, setContent] = useState([]);
@@ -39,6 +40,7 @@ const Trending = () => {
             />
           ))}
       </div>
+      {/* Add custom pagination (page 1 to 10) at the bottom of the page */}
       <CustomPagination setPage={setPage} />
     </div>
   );

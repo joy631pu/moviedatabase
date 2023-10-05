@@ -31,7 +31,7 @@ const useStyles = makeStyles((theme) => ({
     padding: theme.spacing(1, 1, 3),
   },
 }));
-
+// TransitionsModal function for showing information about a single movie/web-series
 export default function TransitionsModal({ children, media_type, id }) {
   const classes = useStyles();
   const [open, setOpen] = useState(false);

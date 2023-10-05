@@ -6,7 +6,7 @@ import { img_300, noPicture } from "../../config/config";
 import "./Carousel.css";
 
 const handleDragStart = (e) => e.preventDefault();
-
+// Gallery component for showing the images of actors and actresses 
 const Gallery = ({ id, media_type }) => {
   const [credits, setCredits] = useState([]);
 

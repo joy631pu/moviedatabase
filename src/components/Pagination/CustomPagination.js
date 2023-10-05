@@ -7,7 +7,7 @@ const darkTheme = createMuiTheme({
     type: "dark",
   },
 });
-
+// Custom Pagination function for displaying content from page 1 to 10
 export default function CustomPagination({ setPage, numOfPages = 10 }) {
   // Scroll to top when page changes
   const handlePageChange = (page) => {
