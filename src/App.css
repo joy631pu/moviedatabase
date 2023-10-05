@@ -1,7 +1,8 @@
+/* Universal selector */
 * {
   scroll-behavior: smooth;
 }
-
+/* CSS class app */
 .app {
   min-height: 100vh;
   background-color: #32363e;
@@ -9,13 +10,13 @@
   padding-top: 130px;
   padding-bottom: 70px;
 }
-
+/*  Media Query */
 @media (max-width: 700px) {
   .app {
     padding-top: 70px;
   }
 }
-
+/* CSS styles for page title */
 .pageTitle {
   text-transform: uppercase;
   display: flex;
@@ -26,7 +27,7 @@
   border-radius: 50px;
   color: white;
 }
-
+/* Media query */
 @media (max-width: 1000px) {
   .pageTitle {
     font-size: 6.4vw;
