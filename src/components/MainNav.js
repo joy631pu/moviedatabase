@@ -25,7 +25,7 @@ export default function SimpleBottomNavigation() {
   const history = useHistory();
   const year = new Date().getFullYear();
   
-
+  // useEffect hook
   useEffect(() => {
     if (value === 0) {
       history.push("/");

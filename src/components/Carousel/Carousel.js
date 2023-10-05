@@ -8,6 +8,7 @@ import "./Carousel.css";
 const handleDragStart = (e) => e.preventDefault();
 // Gallery component for showing the images of actors and actresses 
 const Gallery = ({ id, media_type }) => {
+  // useState() hook
   const [credits, setCredits] = useState([]);
 
   const items = credits.map((c) => (
@@ -40,7 +41,7 @@ const Gallery = ({ id, media_type }) => {
     );
     setCredits(data.cast);
   };
-
+  // useEffect hook
   useEffect(() => {
     fetchCredits();
     // eslint-disable-next-line

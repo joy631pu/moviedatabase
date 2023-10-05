@@ -45,7 +45,7 @@ export default function TransitionsModal({ children, media_type, id }) {
   const handleClose = () => {
     setOpen(false);
   };
-
+ // Fetch data using api key
   const fetchData = async () => {
     const { data } = await axios.get(
       `https://api.themoviedb.org/3/${media_type}/${id}?api_key=e059c3ea4e8095a63a5b575719990b02&language=en-US`
@@ -54,7 +54,7 @@ export default function TransitionsModal({ children, media_type, id }) {
     setContent(data);
     // console.log(data);
   };
-
+  // Fetch data using api key
   const fetchVideo = async () => {
     const { data } = await axios.get(
       `https://api.themoviedb.org/3/${media_type}/${id}/videos?api_key=e059c3ea4e8095a63a5b575719990b02&language=en-US`
@@ -62,7 +62,7 @@ export default function TransitionsModal({ children, media_type, id }) {
 
     setVideo(data.results[0]?.key);
   };
-
+ // useEffect hook
   useEffect(() => {
     fetchData();
     fetchVideo();

@@ -8,7 +8,7 @@ import CustomPagination from "../../components/Pagination/CustomPagination";
 const Trending = () => {
   const [page, setPage] = useState(1);
   const [content, setContent] = useState([]);
-
+  // Fetch data using api key
   const fetchTrending = async () => {
     const { data } = await axios.get(
       `https://api.themoviedb.org/3/trending/all/day?api_key=e059c3ea4e8095a63a5b575719990b02&page=${page}`
