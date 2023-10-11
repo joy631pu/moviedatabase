@@ -4,7 +4,7 @@ import BottomNavigation from "@material-ui/core/BottomNavigation";
 import BottomNavigationAction from "@material-ui/core/BottomNavigationAction";
 import TvIcon from "@material-ui/icons/Tv";
 import MovieIcon from "@material-ui/icons/Movie";
-import SearchIcon from "@material-ui/icons/Search";
+// import SearchIcon from "@material-ui/icons/Search";
 import WhatshotIcon from "@material-ui/icons/Whatshot";
 import { useHistory } from "react-router-dom";
 
@@ -64,11 +64,12 @@ export default function SimpleBottomNavigation() {
         label="TV Series"
         icon={<TvIcon />}
       />
-      <BottomNavigationAction
+      {/* Inactive search page on navigation bar */}
+      {/* <BottomNavigationAction
         style={{ color: "white" }}
         label="Search"
         icon={<SearchIcon />}
-      />
+      /> */}
       <p style={{color:"white"}}>Copyright &copy;{year}&nbsp;
            Joy Barua. All Rights Reserved.
         </p>

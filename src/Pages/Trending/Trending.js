@@ -3,6 +3,7 @@ import "./Trending.css";
 import { useEffect, useState } from "react";
 import SingleContent from "../../components/SingleContent/SingleContent";
 import CustomPagination from "../../components/Pagination/CustomPagination";
+import Search from "../Search/Search";
 // Trending component for showing the latest movies and
 // web-series on the page
 const Trending = () => {
@@ -25,6 +26,9 @@ const Trending = () => {
 
   return (
     <div>
+      {/* Include Search component */}
+      <Search />
+      <br></br>
       <span className="pageTitle">Trending Today</span>
       <div className="trending">
         {content &&
