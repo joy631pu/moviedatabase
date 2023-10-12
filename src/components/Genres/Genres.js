@@ -1,7 +1,7 @@
 import { Chip } from "@material-ui/core";
 import axios from "axios";
 import { useEffect } from "react";
-
+// Genre component for enabling users to select specific genre or genres
 const Genres = ({
   selectedGenres,
   setSelectedGenres,

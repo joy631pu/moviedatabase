@@ -1,3 +1,4 @@
+// useGenre hook for showing movies and tv series based on more than one genres
 const useGenre = (selectedGenres) => {
   if (selectedGenres.length < 1) return "";
 

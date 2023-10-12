@@ -4,7 +4,7 @@ import Genres from "../../components/Genres/Genres";
 import SingleContent from "../../components/SingleContent/SingleContent";
 import useGenre from "../../hooks/useGenre";
 import CustomPagination from "../../components/Pagination/CustomPagination";
-
+// Movies Component for showing most trending movies
 const Movies = () => {
   const [genres, setGenres] = useState([]);
   const [selectedGenres, setSelectedGenres] = useState([]);
@@ -12,7 +12,7 @@ const Movies = () => {
   const [content, setContent] = useState([]);
   const genreforURL = useGenre(selectedGenres);
   // console.log(selectedGenres);
-
+// Fetch data using api
   const fetchMovies = async () => {
     const { data } = await axios.get(
       `https://api.themoviedb.org/3/discover/movie?api_key=e059c3ea4e8095a63a5b575719990b02&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=${page}&with_genres=${genreforURL}`
@@ -20,7 +20,7 @@ const Movies = () => {
     setContent(data.results);
     
   };
-
+// useEffect hook
   useEffect(() => {
     window.scroll(0, 0);
     fetchMovies();
@@ -30,6 +30,7 @@ const Movies = () => {
   return (
     <div>
       <span className="pageTitle">Discover Movies</span>
+      {/* Genre component for showing movies based on selected genres */}
       <Genres
         type="movie"
         selectedGenres={selectedGenres}
@@ -52,7 +53,7 @@ const Movies = () => {
             />
           ))}
       </div>
-      
+      {/* For showing page from 1 to 10 */}
         <CustomPagination setPage={setPage} />
     
     </div>
