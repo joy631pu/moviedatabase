@@ -14,4 +14,5 @@ export const unavailableLandscape =
 export const noPicture =
   "https://upload.wikimedia.org/wikipedia/en/6/60/No_Picture.jpg";
 
-export const API_key = 'e059c3ea4e8095a63a5b575719990b02';
+// API key
+  export const API_key = 'e059c3ea4e8095a63a5b575719990b02';
