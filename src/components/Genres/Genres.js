@@ -1,6 +1,7 @@
 import { Chip } from "@material-ui/core";
 import axios from "axios";
 import { useEffect } from "react";
+import { API_key } from "../../config/config";
 // Genre component for enabling users to select specific genre or genres
 const Genres = ({
   selectedGenres,
@@ -26,7 +27,7 @@ const Genres = ({
 
   const fetchGenres = async () => {
     const { data } = await axios.get(
-      `https://api.themoviedb.org/3/genre/${type}/list?api_key=e059c3ea4e8095a63a5b575719990b02&language=en-US`
+      `https://api.themoviedb.org/3/genre/${type}/list?api_key=${API_key}&language=en-US`
     );
     setGenres(data.genres);
   };

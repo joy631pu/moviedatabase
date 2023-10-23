@@ -12,6 +12,7 @@ import {
   import axios from "axios";
 //   import CustomPagination from "../../components/Pagination/CustomPagination";
   import SingleContent from "../../components/SingleContent/SingleContent";
+import { API_key } from "../../config/config";
  // Search component 
   const Search = () => {
     const [type, setType] = useState(0);
@@ -32,7 +33,7 @@ import {
     const fetchSearch = async () => {
       try {
         const { data } = await axios.get(
-          `https://api.themoviedb.org/3/search/${type?"tv":"movie"}?api_key=e059c3ea4e8095a63a5b575719990b02&language=en-US&query=${searchText}&page=${page}&include_adult=false`
+          `https://api.themoviedb.org/3/search/${type?"tv":"movie"}?api_key=${API_key}&language=en-US&query=${searchText}&page=${page}&include_adult=false`
         );
         setContent(data.results);
         // setNumOfPages(data.total_pages);

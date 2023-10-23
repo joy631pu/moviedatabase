@@ -4,6 +4,7 @@ import Genres from "../../components/Genres/Genres";
 import CustomPagination from "../../components/Pagination/CustomPagination";
 import SingleContent from "../../components/SingleContent/SingleContent";
 import useGenre from "../../hooks/useGenre";
+import { API_key } from "../../config/config";
 // TV Series component for showing most trending tv series
 const Series = () => {
   const [genres, setGenres] = useState([]);
@@ -14,7 +15,7 @@ const Series = () => {
 
   const fetchSeries = async () => {
     const { data } = await axios.get(
-      `https://api.themoviedb.org/3/discover/tv?api_key=e059c3ea4e8095a63a5b575719990b02&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=${page}&with_genres=${genreforURL}`
+      `https://api.themoviedb.org/3/discover/tv?api_key=${API_key}&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=${page}&with_genres=${genreforURL}`
     );
     setContent(data.results);
     // console.log(data);
