@@ -3,7 +3,7 @@
   cursor: pointer;
   position: fixed;
   display: flex;
-  justify-content: center;
+  justify-content:space-around;
   text-transform: uppercase;
   background-color: red;
   font-family: "Montserrat", sans-serif;
