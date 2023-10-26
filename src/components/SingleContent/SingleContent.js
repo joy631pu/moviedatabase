@@ -2,6 +2,8 @@ import { Badge } from "@material-ui/core";
 import { img_300, unavailable } from "../../config/config";
 import "./SingleContent.css";
 import ContentModal from "../ContentModal/ContentModal";
+
+
 // SingleContent component for displaying each movie or web-series
 // in a particular pattern on Trending (Home) page
 const SingleContent = ({
@@ -12,13 +14,21 @@ const SingleContent = ({
   media_type,
   vote_average,
 }) => {
+
+  
+  function BookMark(){
+    alert("Login with your Google account please");
+  }
   return (
-    <ContentModal media_type={media_type} id={id}>
+    <>
+    <div className="flex-container">
+    <ContentModal className="flex-item" media_type={media_type} id={id}>
       {/* For showing IMDB rating */}
       <Badge
         badgeContent={vote_average}
         color={vote_average > 6 ? "primary" : "secondary"}
       />
+      
       {/* To display image */}
       <img
         className="poster"
@@ -33,7 +43,14 @@ const SingleContent = ({
         {/* For showing release data */}
         <span className="subTitle">{date}</span>
       </span>
-    </ContentModal>
+      </ContentModal>
+      
+      <button className="flex-item" onClick={BookMark}>Watch Later</button>
+      
+      </div>
+      
+      
+      </>
   );
 };
 
