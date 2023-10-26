@@ -36,6 +36,9 @@ export default function SimpleBottomNavigation() {
     } else if (value === 3) {
       history.push("/search");
     }
+    else if (value === 4) {
+      history.push("/watchlater");
+    }
   }, [value, history]);
 
   return (
@@ -64,12 +67,18 @@ export default function SimpleBottomNavigation() {
         label="TV Series"
         icon={<TvIcon />}
       />
+      
       {/* Inactive search page on navigation bar */}
       {/* <BottomNavigationAction
         style={{ color: "white" }}
         label="Search"
         icon={<SearchIcon />}
       /> */}
+      <BottomNavigationAction
+        style={{ color: "white" }}
+        label="Watch Later"
+        icon={<MovieIcon />}
+      />
       <p style={{color:"white"}}>Copyright &copy;{year}&nbsp;
            Joy Barua. All Rights Reserved.
         </p>
