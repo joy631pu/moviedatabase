@@ -7,6 +7,7 @@ import Series from "./Pages/Series/Series";
 import Trending from "./Pages/Trending/Trending";
 import Login from "./Pages/forms/Login";
 import Register from "./Pages/forms/Register";
+import PasswordReset from "./Pages/forms/PasswordReset";
 import WatchLater from "./Pages/WatchLater/WatchLater";
 // import Search from "./Pages/Search/Search";
 import { Container, Link } from "@material-ui/core";
@@ -45,7 +46,10 @@ function App() {
           <Route path="" component={Register} />
         </Route>
 
-        {/* <Route path="/watchlater" component={WatchLater} /> */}
+        <Route path="/password-reset" component={LoginRouter}>
+          <Route path="" component={PasswordReset} />
+        </Route>
+          <Route path="/watchlater" component={WatchLater} />
           {/* <Route path="/search" component={Search} /> */}
         </Switch>
       </Container>
