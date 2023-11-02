@@ -1,7 +1,7 @@
 # moviedatabase
 ## Author : Joy Barua
 ## The purpose of developing this project is provide information regarding latest movies and web series; their plot, cast and crews, IMDB rating, trailer.
-### Project Link: https://moviedatabase-401804.nn.r.appspot.com
+### Project Link: https://moviedatabase-401804.nn.r.appspot.com  (MVP)
 ## Resources and References
 ### https://www.themoviedb.org/?language=en-CA
 ### https://developer.themoviedb.org/reference/intro/getting-started
@@ -11,3 +11,11 @@
 ### https://www.linkedin.com/learning/react-design-patterns/take-your-react-skills-to-the-next-level
 ### https://chat.openai.com/auth/login
 ### https://www.w3schools.com/react
+
+### Project Link: https://joy9161.firebaseapp.com/     (Phase 2)
+## Resources and References for Phase 2
+### https://firebase.google.com/
+### https://chat.openai.com/auth/login
+### https://www.linkedin.com/learning/firebase-essential-training/firebase-stop-reinventing-the-wheel
+### https://www.linkedin.com/learning/building-production-ready-react-apps-setup-to-deployment-with-firebase/build-a-stellar-single-page-application-with-react
+
