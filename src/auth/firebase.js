@@ -6,7 +6,10 @@ import {
   createUserWithEmailAndPassword,
   updateProfile,
   signInWithEmailAndPassword,
+  signOut,
   onAuthStateChanged,
+  GoogleAuthProvider,
+  signInWithPopup,
   } from "firebase/auth";
 
 
@@ -44,7 +47,7 @@ export const createUser = async (name, surname, email, password, navigate) => {
       );
     }
 
-    // navigate("/");
+    navigate("/");
     toast.info("Registered successfully!");
   } catch (error) {
     toast.info(error.message);
@@ -55,11 +58,33 @@ export const createUser = async (name, surname, email, password, navigate) => {
 export const loginWithEmail = async (email, password, navigate) => {
   try {
     await signInWithEmailAndPassword(auth, email, password);
-    // navigate("/");
+    navigate("/");
     toast.info("Logged in successfully!");
   } catch (error) {
     toast.info(error.message);
   }
+};
+
+// Login With Google
+export const loginWithGoogle = async (navigate) => {
+  const provider = new GoogleAuthProvider();
+
+  await signInWithPopup(auth, provider)
+    .then(() => {
+      // navigate("/");
+      toast.info("Logged in successfully!");
+    })
+    .catch((error) => {
+      toast.info(error.message);
+    });
+};
+
+// Logout Function
+export const logOut = (navigate) => {
+  signOut(auth);
+  navigate("/login");
+  toast.info("Logged out successfully!");
+  
 };
 
 // Login Control Function

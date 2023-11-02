@@ -26,7 +26,7 @@ const Header = () => {
                 <span className="displayName">
                   {currentUser?.displayName || items?.displayName}
                 </span>
-                <Button>Logout</Button>
+                <Button onClick={() => logOut(navigate)}>Logout</Button>
                 </>
 
               : 

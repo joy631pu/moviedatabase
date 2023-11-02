@@ -45,7 +45,7 @@ function App() {
           <Route path="" component={Register} />
         </Route>
 
-        <Route path="/watchlater" component={WatchLater} />
+        {/* <Route path="/watchlater" component={WatchLater} /> */}
           {/* <Route path="/search" component={Search} /> */}
         </Switch>
       </Container>
