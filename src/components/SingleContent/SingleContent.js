@@ -16,9 +16,7 @@ const SingleContent = ({
 }) => {
 
   
-  function BookMark(){
-    alert("Login with your Google account please");
-  }
+  
   return (
     <>
     <div className="flex-container">
@@ -45,7 +43,7 @@ const SingleContent = ({
       </span>
       </ContentModal>
       
-      <button className="flex-item" onClick={BookMark}>Watch Later</button>
+      <button className="flex-item" >Watch Later</button>
       
       </div>
       
