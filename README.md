@@ -11,7 +11,7 @@
 ### https://www.linkedin.com/learning/react-design-patterns/take-your-react-skills-to-the-next-level
 ### https://chat.openai.com/auth/login
 ### https://www.w3schools.com/react
-
+## The goal of extending this project from MVP to Phase 2 is to include Login, Registration and Firebase authentication to the project.
 ### Project Link: https://joy9161.firebaseapp.com/     (Phase 2)
 ## Resources and References for Phase 2
 ### https://firebase.google.com/
