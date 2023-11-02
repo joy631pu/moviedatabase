@@ -1,26 +1,26 @@
 import "./Header.css";
 
 import React from 'react';
-import GoogleSignInButton from '../../GoogleSignInButton';
+import { Button } from "./Nav.styled";
+import { Link} from "react-router-dom";
 
 // Header Component
 const Header = () => {
-  const handleSuccess = (userData) => {
-    console.log('User successfully signed in:', userData);
-    // You can handle the user data here, e.g., store it in your state.
-  };
-
-  const handleFailure = () => {
-    console.log('Google Sign-In failed.');
-    // Handle sign-in failure here.
-  };
+  
   return (
     <>
     <span onClick={() => window.scroll(0, 0)} className="header">
       MovieDataBase 
-      <div className="button">    
-      <GoogleSignInButton onSuccess={handleSuccess} onFailure={handleFailure} />
-      </div>
+      
+              <div className="Reg">
+              <Button>
+                <Link to="/login">Login</Link>
+              </Button>
+              <Button>
+                <Link to="/register">Register</Link>
+              </Button>
+              </div>
+            
     </span>
     
   </>
