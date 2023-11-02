@@ -12,11 +12,7 @@ import {
   signInWithPopup,
   sendPasswordResetEmail,
 } from "firebase/auth";
-import {
-  toastErrorNotify,
-  toastSuccessNotify,
-  toastWarnNotify,
-} from "../helpers/ToastNotify";
+
 
 const firebaseConfig = {
     apiKey: "AIzaSyBVBlldATILgGTUuQN_J_YHJxZTuvhGE2U",
