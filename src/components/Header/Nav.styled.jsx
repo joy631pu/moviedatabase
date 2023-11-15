@@ -48,7 +48,7 @@ export const Button = styled.button`
   transition: background-color 0.3s ease-in-out;
   padding: 1rem 1rem;
   border-radius: 0.1rem;
-  font-size: 2rem;
+  font-size: 2.5rem;
   &:hover {
     background-color: #7393B3;
   }
