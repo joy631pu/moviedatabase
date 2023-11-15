@@ -55,7 +55,7 @@ const Gallery = ({ id, media_type }) => {
       disableButtonsControls
       responsive={responsive}
       items={items}
-      autoPlay
+      // autoPlay
     />
   );
 };
