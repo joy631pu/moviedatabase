@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-// import { passwordReset } from "../../auth/firebase";
+import { passwordReset } from "../../auth/firebase";
 import {
   Form,
   Aside,
@@ -19,7 +19,7 @@ const PasswordReset = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // passwordReset(navigate, reset);
+    passwordReset(navigate, reset);
   };
 
   return (

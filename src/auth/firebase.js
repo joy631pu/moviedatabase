@@ -47,7 +47,7 @@ export const createUser = async (name, surname, email, password, history) => {
   try {
     await createUserWithEmailAndPassword(auth, email, password);
 
-    updateProfile(auth.currentUser, {
+    await updateProfile(auth.currentUser, {
       displayName: `${name} ${surname}`,
     });
     
@@ -118,8 +118,8 @@ export const userObserver = (setCurrentUser) => {
 };
 
 // Reset Function
-export const passwordReset = (history, email) => {
-  sendPasswordResetEmail(auth, email)
+export const passwordReset = async(history, email) => {
+  await sendPasswordResetEmail(auth, email)
     .then(() => {
       history.push("/login");
       toast.info("Please check your mail box!");
