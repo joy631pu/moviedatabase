@@ -15,32 +15,42 @@ import {
 
 
 const firebaseConfig = {
-    apiKey: "AIzaSyBVBlldATILgGTUuQN_J_YHJxZTuvhGE2U",
+  
 
-    authDomain: "joy9161.firebaseapp.com",
-  
-    projectId: "joy9161",
-  
-    storageBucket: "joy9161.appspot.com",
-  
-    messagingSenderId: "325290723940",
-  
-    appId: "1:325290723940:web:c5d1c522790badd4fb2d71",
+  apiKey: "AIzaSyBQxr5T615VATNQ_MYsEl6pJzRJvBjaJ5c",
+
+  authDomain: "moviedatabasefinalproject.firebaseapp.com",
+
+  databaseURL: "https://moviedatabasefinalproject-default-rtdb.firebaseio.com",
+
+  projectId: "moviedatabasefinalproject",
+
+  storageBucket: "moviedatabasefinalproject.appspot.com",
+
+  messagingSenderId: "61532340290",
+
+  appId: "1:61532340290:web:c3d8cc89b7a9854a956ddb",
+
+  measurementId: "G-9QXCLFYYGY"
+
+
+
   
 };
 
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 
+
 // Create a new user
-export const createUser = async (name, surname, email, password, navigate) => {
+export const createUser = async (name, surname, email, password, history) => {
   try {
-    createUserWithEmailAndPassword(auth, email, password);
+    await createUserWithEmailAndPassword(auth, email, password);
 
     updateProfile(auth.currentUser, {
       displayName: `${name} ${surname}`,
     });
-    //
+    
     if (auth.currentUser) {
       const { email, displayName} = auth.currentUser;
       localStorage.setItem(
@@ -49,18 +59,19 @@ export const createUser = async (name, surname, email, password, navigate) => {
       );
     }
 
-    // navigate("/login");
+    history.push("/");
     toast.info("Registered successfully!");
-  } catch (error) {
+  } 
+  catch (error) {
     toast.info(error.message);
   }
 };
 
 // Login Function
-export const loginWithEmail = async (email, password, navigate) => {
+export const loginWithEmail = async (email, password, history) => {
   try {
-    signInWithEmailAndPassword(auth, email, password);
-    // navigate("/");
+    await signInWithEmailAndPassword(auth, email, password);
+    history.push("/");
     toast.info("Logged in successfully!");
   } catch (error) {
     toast.info(error.message);
@@ -68,12 +79,12 @@ export const loginWithEmail = async (email, password, navigate) => {
 };
 
 // Login With Google
-export const loginWithGoogle = async (navigate) => {
+export const loginWithGoogle = async (history) => {
   const provider = new GoogleAuthProvider();
 
   await signInWithPopup(auth, provider)
     .then(() => {
-      // navigate("/");
+      history.push("/");
       toast.info("Logged in successfully!");
     })
     .catch((error) => {
@@ -82,9 +93,9 @@ export const loginWithGoogle = async (navigate) => {
 };
 
 // Logout Function
-export const logOut = (navigate) => {
+export const logOut = (history) => {
   signOut(auth);
-  // navigate("/login");
+  history.push("/");
   toast.info("Logged out successfully!");
   
 };
@@ -107,10 +118,10 @@ export const userObserver = (setCurrentUser) => {
 };
 
 // Reset Function
-export const passwordReset = (navigate, email) => {
+export const passwordReset = (history, email) => {
   sendPasswordResetEmail(auth, email)
     .then(() => {
-      // navigate("/login");
+      history.push("/login");
       toast.info("Please check your mail box!");
     })
     .catch((error) => {
