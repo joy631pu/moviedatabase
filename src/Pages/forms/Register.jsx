@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-// import { createUser, loginWithGoogle } from "../../auth/firebase";
+import { createUser, loginWithGoogle } from "../../auth/firebase";
 import {
   Form,
   Aside,
@@ -22,7 +22,7 @@ const Register = () => {
   const handleRegister = (e) => {
     e.preventDefault();
     const { name, surname, email, password } = register;
-    // createUser(name, surname, email, password, navigate);
+    createUser(name, surname, email, password, navigate);
   };
 
   return (

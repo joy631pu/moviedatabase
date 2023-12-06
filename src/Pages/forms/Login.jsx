@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-// import { loginWithEmail, loginWithGoogle } from "../../auth/firebase";
+import { loginWithEmail, loginWithGoogle } from "../../auth/firebase";
 import {
   Form,
   Aside,
@@ -24,7 +24,7 @@ const Login = () => {
 
     const { email, password } = login;
 
-    // loginWithEmail(email, password, navigate);
+    loginWithEmail(email, password, navigate);
   };
 
   return (
@@ -56,7 +56,7 @@ const Login = () => {
         <Link to="/password-reset">Forgot Password?</Link>
         <Button type="submit">Login</Button>
         <Button 
-        // onClick={() => loginWithGoogle(navigate)}
+        onClick={() => loginWithGoogle(navigate)}
         >
           <FcGoogle /> Continue With Google
         </Button>
