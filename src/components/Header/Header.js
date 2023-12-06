@@ -17,24 +17,24 @@ const Header = () => {
   
   return (
     <>
-    <span onClick={() => window.scroll(0, 0)} className="header">
-      MovieDataBase 
+    <span onClick={() => window.scroll(0, 0)} className="header"><a href="/">
+      MovieDataBase </a>
       
-      <span className="Reg">
+      <span>
               { currentUser || items ? 
                 <>
-                <span className="displayName">
+                <span style={{fontSize:"3vw",fontWeight:"bold"}} className="displayName">
                   {currentUser?.displayName || items?.displayName}
                 </span>
-                <Button onClick={() => logOut(navigate)}>Logout</Button>
+                <Button  style={{fontWeight:"bold",fontFamily:"sans-serif"}} onClick={() => logOut(navigate)}>Logout</Button>
                 </>
 
               : 
                 <>
-                <Button>
+                <Button style={{fontWeight:"bold",fontFamily:"sans-serif"}}>
                 <Link to="/login">Login</Link>
               </Button>
-              <Button>
+              <Button style={{fontWeight:"bold",fontFamily:"sans-serif"}}>
                 <Link to="/register">Register</Link>
               </Button>
 
