@@ -7,6 +7,7 @@ import MovieIcon from "@material-ui/icons/Movie";
 // import SearchIcon from "@material-ui/icons/Search";
 import WhatshotIcon from "@material-ui/icons/Whatshot";
 import { useHistory } from "react-router-dom";
+import "../App.css"
 
 
 const useStyles = makeStyles({
@@ -26,47 +27,62 @@ export default function SimpleBottomNavigation() {
   const year = new Date().getFullYear();
   
   // useEffect hook
-  useEffect(() => {
-    if (value === 0) {
-      history.push("/");
-    } else if (value === 1) {
-      history.push("/movies");
-    } else if (value === 2) {
-      history.push("/series");
-    } else if (value === 3) {
-      history.push("/search");
-    }
-    // else if (value === 4) {
-    //   history.push("/watchlater");
-    // }
-  }, [value, history]);
+  // useEffect(() => {
+  //   if (value === 0) {
+  //     history.push("/");
+  //   } else if (value === 1) {
+  //     history.push("/movies");
+  //   } else if (value === 2) {
+  //     history.push("/series");
+  //   } 
+  //   else if (value === 3) {
+  //     history.push("/login");
+  //   }
+    
+  // }, [value, history]);
+
+  const handleChange = (event, newValue) => {
+    history.push(`/${newValue}`);
+    setValue(newValue);
+  };
 
   return (
     <>
     
     <BottomNavigation
-      value={value}
-      onChange={(event, newValue) => {
-        setValue(newValue);
-      }}
+      // value={value}
+      // onChange={(event, newValue) => {
+      //   setValue(newValue);
+      // }}
+      value={value} 
+        onChange={handleChange}
       showLabels
       className={classes.root}
     >
-      <BottomNavigationAction
-        style={{ color: "white" }}
-        label="Trending"
+      <BottomNavigationAction 
+        style={{ color: "white"}}
+        label="TRENDING"
         icon={<WhatshotIcon />}
+        value=""
       />
-      <BottomNavigationAction
-        style={{ color: "white" }}
+      <BottomNavigationAction 
+        style={{ color: "white"}}
         label="MOVIES"
         icon={<MovieIcon />}
+        value="movies"
       />
       <BottomNavigationAction
-        style={{ color: "white" }}
+        style={{ color: "white"}}
+        label="SERIES"
+        icon={<TvIcon />}
+        value="series"
+      />
+      {/* <BottomNavigationAction
+        style={{ color: "white"}}
         label="TV SERIES"
         icon={<TvIcon />}
-      />
+      /> */}
+      
       
       {/* Inactive search page on navigation bar */}
       {/* <BottomNavigationAction
@@ -83,6 +99,7 @@ export default function SimpleBottomNavigation() {
            Joy Barua. All Rights Reserved.
         </p>
     </BottomNavigation>
+    
     </>
   );
 }
