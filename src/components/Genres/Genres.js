@@ -50,7 +50,7 @@ const Genres = ({
           key={genre.id}
           color="primary"
           clickable
-          size="small"
+          size="medium"
           onDelete={() => handleRemove(genre)}
         />
       ))}
@@ -60,7 +60,7 @@ const Genres = ({
           label={genre.name}
           key={genre.id}
           clickable
-          size="small"
+          size="medium"
           onClick={() => handleAdd(genre)}
         />
       ))}

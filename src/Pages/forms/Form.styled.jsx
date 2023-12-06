@@ -36,7 +36,7 @@ export const Form = styled.form`
 `;
 
 export const Title = styled.h1`
-  color: #435058;
+  color: #FFFFF;
   @media (max-width: 450px) {
     font-size: 1.5rem;
   }
@@ -50,7 +50,7 @@ export const Row = styled.div`
 `;
 
 export const Label = styled.label`
-  color: #435058;
+  color: #FFFFFF;
 `;
 
 export const Input = styled.input`
