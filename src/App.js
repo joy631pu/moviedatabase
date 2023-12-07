@@ -17,7 +17,7 @@ import { AuthContext } from "./context/AuthContextProvider";
 import AuthContextProvider from "./context/AuthContextProvider";
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-
+import WatchListReal from "./Pages/Watchlist/WatchListReal"
 
 
 function App() {
@@ -38,6 +38,7 @@ function App() {
           <Route path="/" component={Trending} exact />
           <Route path="/movies" component={Movies} />
           <Route path="/series" component={Series} />
+          <Route path="/watchlist" component={WatchListReal} />
           <Route path="/login" component={LoginRouter}>
           <Route path="" component={Login} />
         </Route>
