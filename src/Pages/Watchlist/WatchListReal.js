@@ -14,7 +14,7 @@ const WatchListReal = () => {
         <Header />
         <Switch>
           <Route exact path="/watchlist" component={WatchList} />
-          <Route exact path="/" component={WatchList} />
+          {/* <Route exact path="/" component={WatchList} /> */}
           <Route exact path="/watched" component={Watched} />
           <Route exact path="/add" component={Add} />
         </Switch>
