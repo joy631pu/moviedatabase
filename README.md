@@ -37,6 +37,9 @@
 - TMDB API (https://developer.themoviedb.org/reference/intro/getting-started
 )
 
+## Testing Report Link: https://pagespeed.web.dev/analysis/https-moviedatabasefinalproject-firebaseapp-com/l8svfnnldj?form_factor=desktop
+
+
 
 
 
