@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import { createUser, loginWithGoogle } from "../../auth/firebase";
+
+import { createUser} from "../../auth/firebase";
 import {
   Form,
   Aside,
@@ -12,7 +12,7 @@ import {
   Title,
 } from "./Form.styled";
 
-import { FcGoogle } from "react-icons/fc";
+
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 
 const Register = () => {

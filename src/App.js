@@ -10,7 +10,7 @@ import Register from "./Pages/forms/Register";
 import PasswordReset from "./Pages/forms/PasswordReset";
 
 // import Search from "./Pages/Search/Search";
-import { Container, Link } from "@material-ui/core";
+import { Container} from "@material-ui/core";
 import { useContext } from "react";
 import { AuthContext } from "./context/AuthContextProvider";
 
