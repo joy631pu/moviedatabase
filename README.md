@@ -9,7 +9,6 @@
 ### https://www.linkedin.com/learning/react-design-patterns/take-your-react-skills-to-the-next-level
 ### https://chat.openai.com/auth/login
 ### https://www.w3schools.com/react
-## Resources and References for Phase 2
 ### https://firebase.google.com/
 ### https://chat.openai.com/auth/login
 ### https://www.linkedin.com/learning/firebase-essential-training/firebase-stop-reinventing-the-wheel
